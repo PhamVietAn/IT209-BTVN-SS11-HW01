@@ -1,0 +1,37 @@
+MINH CHỨNG MÔ PHỎNG - không phải log xuất từ GitHub Actions.
+Repository minh họa: CrouAn244/spring-boot-gradle-ci
+Nhánh: main
+Workflow: Java Spring Boot CI (Gradle)
+Job: Run Unit Tests
+Runner: ubuntu-latest
+
+[Checkout mã nguồn]
+Run actions/checkout@v5
+Syncing repository: CrouAn244/spring-boot-gradle-ci
+
+[Thiết lập môi trường Java JDK 17]
+Run actions/setup-java@v5
+java-version: 17
+distribution: temurin
+Java 17 configured successfully.
+
+[Cấp quyền cho Gradle Wrapper]
+Run chmod +x gradlew
+Process completed with exit code 0.
+
+[Thực thi JUnit Test với Gradle]
+Run ./gradlew test
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+> Task :test
+BUILD SUCCESSFUL in 1m 10s
+4 actionable tasks: 4 executed
+Process completed with exit code 0.
+
+Kết quả mô phỏng: 5 kiểm thử JUnit, 0 thất bại, 0 bỏ qua.
+Trạng thái job mô phỏng: Success
+Thời gian toàn bộ job mô phỏng: 1m 32s
